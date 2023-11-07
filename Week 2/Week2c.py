@@ -1,4 +1,5 @@
 tuple1 = ("A", "B", "C")
+
 print(tuple1)
 print(tuple1[0:-1])
 # tuple1[0] = "X"
