@@ -11,7 +11,7 @@ def click_event(event):
         button = "Middle"
     else:
         button = "Right"
-
+    print(event.widget['text'])
     message = button + " clicked to " + event.widget["text"]
 
     ttk.Label(win, text=message).pack()

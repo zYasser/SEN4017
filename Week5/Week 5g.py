@@ -13,8 +13,14 @@ def show_context_menu(event):
 
 
 def show_date():
-    labels.append(ttk.Label(content, text=datetime.now().strftime("%d.%m.%Y - %H:%M:%S"), font=("Consolas", 16)))
-    labels[-1].pack(pady=(10, 0))
+    labels.append(
+        ttk.Label(
+            content,
+            text=datetime.now().strftime("%d.%m.%Y - %H:%M:%S"),
+            font=("Consolas", 16),
+        )
+    )
+    labels[-1].pack(pady=10)
     canvas.update()  # Refresh the canvas GUI after adding a new label
     configure_canvas()
 
@@ -26,9 +32,9 @@ def clear():
 
 
 def configure_canvas():
-    # Set the canvas's scrollable region to include the entire content
+    print(canvas.bbox("all"))
     canvas.configure(scrollregion=canvas.bbox("all"))
-    # Adjust the content frame (content_window) width to match the width of the canvas
+    # # Adjust the content frame (content_window) width to match the width of the canvas
     canvas.itemconfigure("content_window", width=canvas.winfo_width())
 
 
@@ -41,6 +47,11 @@ win.title("SEN4017 - Week 5")
 win.iconbitmap("python.ico")
 win.geometry("300x300+500+200")
 labels = []
+# frameL = ttk.Frame(win)
+# frameL.pack(
+#     side="left",
+# )
+# ttk.Button(master=frameL, text="Click").pack(anchor="center", fill="both", expand=True)
 
 # Add a container frame for the canvas and scrollbar widgets
 container = tk.Frame(win)
@@ -52,7 +63,6 @@ canvas.pack(fill="both", expand=True)
 
 # Add a scrollbar widget
 sb = ttk.Scrollbar(container, orient="vertical", command=canvas.yview)
-sb.place(relx=1, rely=0, relheight=1, anchor="ne")
 
 # Configure the canvas to respond to y-axis scrolling commands
 canvas.configure(yscrollcommand=sb.set)
@@ -60,6 +70,7 @@ canvas.configure(yscrollcommand=sb.set)
 # Create a frame that will keep the actual content
 content = tk.Frame(canvas)
 content.pack(fill="both", expand=True)
+sb.place(relx=1, rely=0, relheight=1, anchor="ne")
 
 # Add the content frame to the canvas widget
 canvas.create_window((0, 0), window=content, anchor="ne", tags="content_window")

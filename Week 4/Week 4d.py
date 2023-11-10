@@ -6,7 +6,7 @@ from tkinter import ttk
 win = tk.Tk()
 win.title("SEN4017 - Week 4")
 win.geometry("500x500+100+100")
-win.iconbitmap("python.ico")
+# win.iconbitmap("python.ico")
 check_state = tk.BooleanVar()
 
 

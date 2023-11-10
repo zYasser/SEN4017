@@ -22,7 +22,6 @@ def return_key(event):
 
 win = tk.Tk()
 win.title("SEN4017 - Week 5")
-win.iconbitmap("python.ico")
 win.geometry("300x300+500+200")
 
 entry1 = ttk.Entry(win)
@@ -33,7 +32,7 @@ entry1.pack(pady=20)
 button1.pack(pady=(0, 20))
 label1.pack()
 
-entry1.bind("<Key>", key_press)  # KeyPress, KeyRelease
+entry1.bind("<KeyPress>", key_press)  # KeyPress, KeyRelease
 entry1.bind("<FocusIn>", focus_gained)
 entry1.bind("<FocusOut>", focus_lost)
 entry1.bind("<Return>", return_key)

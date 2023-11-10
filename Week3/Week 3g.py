@@ -12,11 +12,11 @@ entry1 = ttk.Entry(win, width=30)
 def click_handler():
     if len(entry1.get()) > 0:
         label2.configure(text="Hello " + entry1.get())
-        entry1.delete(0, "end")
-    entry1.focus_set()
+        entry1.delete()
 
+win.state(newstate="zoomed")
 
-button1 = ttk.Button(win, text="Send", command=click_handler)
+button1 = ttk.Button(win, text="Send", command=click_handler, )
 
 label1.pack()
 entry1.pack()

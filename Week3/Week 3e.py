@@ -15,8 +15,8 @@ label1 = tk.Label(win, text="Label 1", bg="red", fg="white")
 label2 = tk.Label(win, text="Label 2", bg="green", fg="white")
 label3 = tk.Label(win, text="Label 3", bg="blue", fg="white")
 
-label1.grid(row=0, column=0, sticky="nswe")
-label2.grid(row=1, column=2, sticky="nswe")
-label3.grid(row=2, column=1, sticky="nswe")
+label1.grid(row=0, column=0, sticky="se")
+label2.grid(row=1, column=2, sticky="ns")
+label3.grid(row=2, column=1, sticky="we")
 
 win.mainloop()
