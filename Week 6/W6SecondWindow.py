@@ -7,7 +7,6 @@ class SecondWindow(tk.Toplevel):
         super().__init__()
         self.parent = parent
         self.title("Second Window")
-        self.iconbitmap("python.ico")
         self.geometry("300x200")
         self.lbl1 = None
         self.entry1 = None
@@ -16,7 +15,7 @@ class SecondWindow(tk.Toplevel):
 
         # Define the behavior of a window when the user attempts to close it
         # by clicking the "X" button in the window's title bar
-        self.protocol("WM_DELETE_WINDOW", self.close_window)
+        # self.protocol("WM_DELETE_WINDOW", self.close_window)
 
     def create_widgets(self):
         self.lbl1 = ttk.Label(self, text="Second Window", font=("Calibri", 16))

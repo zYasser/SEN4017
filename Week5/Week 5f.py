@@ -26,7 +26,6 @@ def clear():
 
 win = tk.Tk()
 win.title("SEN4017 - Week 5")
-win.iconbitmap("python.ico")
 win.geometry("300x300+500+200")
 labels = []
 

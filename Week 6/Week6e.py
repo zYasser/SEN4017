@@ -28,7 +28,7 @@ class Student(Person):
 
     def __str__(self):
         return f"Student is {super().__str__()}.\n -- GPA: {self.gpa}"
-
+    
 
 stu1 = Student("Julia", "Smith", 3.6)
 stu1.full_name = "New Person"

@@ -7,7 +7,6 @@ class MainWindow:
     def __init__(self):
         self.win = tk.Tk()
         self.win.title("SEN4017 - Week 6")
-        self.win.iconbitmap("python.ico")
         self.win.geometry("300x300")
         self.win2 = None
         self.lbl1 = None
