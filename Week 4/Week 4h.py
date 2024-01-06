@@ -28,7 +28,10 @@ def run_progressbar():
 
 
 progressbar1 = ttk.Progressbar(
-    win, orient="vertical", length=150, mode="determinate" ,
+    win,
+    orient="vertical",
+    length=150,
+    mode="indeterminate",
 )  # determinate, indeterminate
 progressbar1.pack(pady=10)
 

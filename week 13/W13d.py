@@ -39,6 +39,7 @@ def import_data():
 def export_data():
     if len(tv.get_children()) == 0:
         msg.showinfo(title="Export Data", message="No data available to export.")
+        msg.askyesno()
         return
 
     wb = Workbook()

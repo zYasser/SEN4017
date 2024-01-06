@@ -32,7 +32,7 @@ frame1.pack(pady=20, padx=20, fill="both", expand=True)
 lbl1 = ctk.CTkLabel(frame1, text="Label")
 lbl1.pack(pady=(10, 0))
 
-entry1 = ctk.CTkEntry(frame1, placeholder_text="You can type here.")
+entry1 = ctk.CTkEntry(frame1, placeholder_text="sssssssssssss"  ,corner_radius=100)
 entry1.pack(pady=(10, 0))
 entry1.bind("<KeyRelease>", set_text)
 

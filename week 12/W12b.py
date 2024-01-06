@@ -7,7 +7,7 @@ win = ttk.Window(themename="cosmo")
 win.geometry("300x450+700+200")
 win.title("SEN4017")
 
-de1 = ttk.DateEntry(win, firstweekday=0, bootstyle="primary")
+de1 = ttk.DateEntry(win, firstweekday=0, bootstyle="superhero")
 de1.pack(pady=(10, 0))
 
 me1 = ttk.Meter(win,
